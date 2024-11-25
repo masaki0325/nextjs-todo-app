@@ -3,7 +3,6 @@
 import { addTodo } from "@/utils/supabaseFunctions";
 import { useRouter } from "next/navigation";
 import React, { FormEvent, useState } from "react";
-import { v4 as uuid } from "uuid";
 
 const AddTask = () => {
   const router = useRouter();
