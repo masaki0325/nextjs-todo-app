@@ -1,7 +1,7 @@
 "use client";
 
-import { deleteTodo, editTodo } from "@/api";
 import { Todo } from "@/types/types";
+import { editTodo, deleteTodo } from "@/utils/supabaseFunctions";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 

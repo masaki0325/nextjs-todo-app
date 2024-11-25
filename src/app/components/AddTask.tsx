@@ -1,6 +1,6 @@
 "use client";
 
-import { addTodo } from "@/api";
+import { addTodo } from "@/utils/supabaseFunctions";
 import { useRouter } from "next/navigation";
 import React, { FormEvent, useState } from "react";
 import { v4 as uuid } from "uuid";
@@ -12,10 +12,7 @@ const AddTask = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await addTodo({
-      id: uuid(),
-      text: taskTitle,
-    });
+    await addTodo(taskTitle);
     setTaskTitle("");
 
     router.refresh();
